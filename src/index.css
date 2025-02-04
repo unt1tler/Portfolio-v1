@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+:root[data-theme="dark"] {
+  --color-primary: 122, 162, 247;
+  --color-secondary: 187, 154, 247;
+  --color-background: 26, 27, 38;
+  --color-surface: 36, 40, 59;
+  --color-text: 169, 177, 214;
+  --color-muted: 86, 95, 137;
+}
+
+:root[data-theme="light"] {
+  --color-primary: 88, 101, 242;
+  --color-secondary: 87, 242, 135;
+  --color-background: 250, 250, 252;
+  --color-surface: 255, 255, 255;
+  --color-text: 46, 51, 56;
+  --color-muted: 116, 127, 141;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-primary));
+}
+
+/* Perspective utilities */
+.perspective-\[1000px\] {
+  perspective: 1000px;
+}
